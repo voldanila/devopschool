@@ -12,5 +12,5 @@ WORKDIR /tmp/test/boxfuse-sample-java-war-hello
 RUN mvn package
 WORKDIR /tmp/test/boxfuse-sample-java-war-hello/target
 RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
-CMD java
+CMD sudo service tomcat9 start && tail -f /var/log/tomcat9/catalina.out
 
