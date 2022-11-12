@@ -6,7 +6,7 @@ RUN apt install tomcat9 -y
 EXPOSE 8080
 RUN apt install git -y
 RUN mkdir /tmp/test
-RUN CD tmp/test
+RUN cd /tmp/test
 # WORKDIR /tmp/test
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN cd boxfuse-sample-java-war-hello
