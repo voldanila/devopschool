@@ -9,3 +9,4 @@ RUN mkdir /tmp/test
 WORKDIR /tmp/test
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN cd boxfuse-sample-java-war-hello
+CMD echo "Test1"
