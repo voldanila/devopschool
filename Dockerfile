@@ -1,4 +1,4 @@
-FROM ubuntu:22.04.1
+FROM ubuntu:22.04
 RUN app update
 RUN apt install default-jdk -y
 RUN apt install maven -y
