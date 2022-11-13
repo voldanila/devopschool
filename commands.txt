@@ -1,0 +1,368 @@
+    1  ss -tpln
+    2  netstat -tpln
+    3  lsof -p 606
+    4  clear
+    5  apt update
+    6  apt install docker.io
+    7  docker run -i -t ubuntu:18.04 /bin/bash
+    8  docker ps -a
+    9  docker start 90def64167db
+   10  docker ps -a
+   11  docker inspect 90def64167db
+   12  docker stop 90def64167db
+   13  docker ps -a
+   14  docker rm 90def64167db
+   15  docker ps -a
+   16  docker images
+   17  pwd
+   18  nano Dockerfile
+   19  ls
+   20  nano index.html
+   21  ls
+   22  docker build -t mywebapp1 .
+   23  docker run -d -p 80:80 mywebapp1
+   24  docker ps
+   25  docker image tag mywebapp1 voldanila/mywebapp1
+   26  docker images
+   27  docker login 
+   28  docker push voldanila/mywebapp1
+   29  git status
+   30  dir .git /b/s 
+   31  dir .git /b /s 
+   32  dir .git
+   33  cd /etc
+   34  git status
+   35  ll
+   36  cd /tmp
+   37  git status
+   38  mkdir devopschool
+   39  rdmdir
+   40  rm
+   41  rm --help
+   42  rm -r devopschool
+   43  ll
+   44  rm -r devopschool && cd "$_"
+   45  mkdir devopschool && cd "$_"
+   46  git init
+   47  git status
+   48  git add .
+   49  git status
+   50  git remote add origin git@github.com:voldanila/devopschool.git
+   51  git status
+   52  git pull
+   53  git push -u origin master
+   54  git status
+   55  git add
+   56  git add .
+   57  git pull
+   58  git remote add origin https://github.com/voldanila/devopschool.git
+   59  rm 
+   60  rm --help
+   61  ll
+   62  rm ./.git
+   63  rm -r ./.git
+   64  ll
+   65  git init
+   66  git remote add origin https://github.com/voldanila/devopschool.git
+   67  git status
+   68  push -u origin master
+   69  git push -u origin master
+   70  git commit -m "first commit"
+   71  git remote add origin https://github.com/voldanila/devopschool.git
+   72  git push -u origin master
+   73  git push -u origin main
+   74  git branch -vv 
+   75  git push
+   76  git push --set-upstream origin master
+   77  ping https://github.com/voldanila/devopschool.git
+   78  git push origin master:master
+   79  git clone https://github.com/voldanila/devopschool.git
+   80  git status
+   81  ll
+   82  cd devopschool
+   83  ll
+   84  cd ..
+   85  rm devopschool/
+   86  rm -r devopschool/
+   87  ll
+   88  git status
+   89  git push -u origin master
+   90  git pull
+   91  ll
+   92  ls
+   93  ll
+   94  git show
+   95  git pull
+   96  git-pull(1)
+   97  git-pull
+   98  git pull
+   99  ll
+  100  git clone https://github.com/voldanila/devopschool.git
+  101  ll
+  102  cd devopschool/
+  103  ll
+  104  git pull
+  105  cat script1.sh 
+  106  apt-cache policy tomcat*
+  107  cd /tmp
+  108  ll
+  109  git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+  110  ll
+  111  cd devopschool/
+  112  ll
+  113  git pull
+  114  ll
+  115  docker build -t hw6 .
+  116  ll
+  117  git pull
+  118  ll
+  119  docker build -t hw6 .
+  120  git pull
+  121  docker build -t hw6 .
+  122  git pull
+  123  ll
+  124  docker build -t hw6 .
+  125  git pull
+  126  ll
+  127  docker build -t hw6 .
+  128  git pull
+  129  ll
+  130  docker build -t hw6 .
+  131  git pull
+  132  docker build -t hw6 .
+  133  ll
+  134  ls
+  135  docker ps -a
+  136  cd /var/lib/docker/
+  137  ll
+  138  cd image/
+  139  ll
+  140  cd /tmp/
+  141  ll
+  142  cd devopschool/
+  143  ll
+  144  git pull
+  145  docker build -t 1 .
+  146  nano index.html
+  147  docker build -t 1 .
+  148  ll
+  149  docker run -d -p 80:80 1
+  150  docker run -d -p 80:80 2
+  151  docker run -d -p 82:80 2
+  152  ll
+  153  docker build -t 3 .
+  154  ll
+  155  docker images -a
+  156  docker ps -a
+  157  docker rm $(docker ps -a -f status=exited -q)
+  158  docker ps -a
+  159  docker rm $(docker ps -a -f status=exited -f status=created -q)
+  160  docker ps -a
+  161  docker ps
+  162  docker stop $(docker ps -a -q)
+  163  docker rm $(docker ps -a -q)
+  164  docker ps
+  165  docker volume ls
+  166  git pull
+  167  docker build -t 3 .
+  168  docker image
+  169  docker images
+  170  docker build -t 4 .
+  171  docker images
+  172  docker run -d -p 8080:8080 4
+  173  docker ps
+  174  echo "test1"
+  175  git pull
+  176  ll
+  177  docker run -p 8080:8080 5
+  178  docker build -t 5 .
+  179  docker run -p 8080:8080 5
+  180  git pull
+  181  docker build -t 6 .
+  182  docker run -p 8080:8080 6
+  183  docker ps
+  184  docker images
+  185  docker images -a
+  186  docker rmi $(docker images -a -q)
+  187  docker stop $(docker ps -a -q)
+  188  docker rm $(docker ps -a -q) 
+  189  docker ps -a
+  190  docker rmi $(docker images -a -q)
+  191  docker images -a
+  192  docker system prune
+  193  docker system prune -a
+  194  docker rmi $(docker images -a -q)
+  195  docker images -a
+  196  docker ps -a
+  197  cd /tmp
+  198  ll
+  199  cd /usr
+  200  ll
+  201  cd local
+  202  ll
+  203  docker
+  204  docker run -i -t ubuntu:18.04 /bin/bash
+  205  ll
+  206  docker ps
+  207  cd /tmp
+  208  ll
+  209  cd ..
+  210  cd usr/
+  211  ll
+  212  cd /local
+  213  cd local
+  214  ll
+  215  cd ..
+  216  ll
+  217  cd tmp
+  218  ll
+  219  mkdir devopschool && cd "$_"
+  220  git init
+  221  git add .
+  222  git clone https://github.com/voldanila/devopschool.git
+  223  ll
+  224  cd devopschool/
+  225  ll
+  226  docker build -t 1
+  227  docker build -t first
+  228  docker build -t first .
+  229  git pull
+  230  docker build -t second .
+  231  docker run -i -t ubuntu:18.04 /bin/bash
+  232  git pull
+  233  ll
+  234  cat Dockerfile 
+  235  docker build -t first1 .
+  236  git pull
+  237  docker build -t first2 .
+  238  git pull
+  239  docker build -t first3 .
+  240  git pull
+  241  docker build -t first4 .
+  242  docker run -d -p 8080:8080 first4
+  243  docker ps
+  244  docker ps -a
+  245  docker run -p 8080:8080 first4
+  246  git pull
+  247  docker build -t first5 .
+  248  docker run -p 8080:8080 first5
+  249  docker run -d -p 8080:8080 first5
+  250  docker ps
+  251  docker ps -a
+  252  git pull
+  253  docker build -t first6 .
+  254  docker ps
+  255  git pull
+  256  docker build -t first7 .
+  257  docker ps
+  258  docker ps -a
+  259  git pull
+  260  docker build -t first8 .
+  261  docker run -d -p 8080:8080 first8
+  262  docker ps
+  263  git pull
+  264  docker run -d -p 8080:8080 first9
+  265  docker build -t first9 .
+  266  docker ps
+  267  git pull
+  268  docker build -t first .
+  269  docker run -d -p 8080:8080 first
+  270  docker ps
+  271  git pull
+  272  docker build -t first .
+  273  docker run -p 8080:8080 first
+  274  docker run -d -p 8080:8080 first
+  275  docker ps
+  276  cd /tmp
+  277  ll
+  278  git ls
+  279  find / -type d -iname '*devops*'
+  280  ll
+  281  cd /home/danila
+  282  mkdir devops
+  283  rm -r /devops
+  284  rm -r devops
+  285  ll
+  286  mkdir devops && "$_"
+  287  mkdir devops && cd "$_"
+  288  rm -r devops
+  289  mkdir devops && cd "$_"
+  290  git init
+  291  git remote add origin https://github.com/voldanila/devopschool.git
+  292  git pull
+  293  ll
+  294  git clone https://github.com/voldanila/devopschool.git
+  295  ll
+  296  cd devopschool/
+  297  docker build -t first .
+  298  docker ps 
+  299  docker ps -a
+  300  docker run -d -p 8080:8080 
+  301  docker run -d -p 8080:8080 /bin/bash
+  302  git pull
+  303  ll
+  304  docker build -t first .
+  305  docker run -d -p 8080:8080 /bin/bash
+  306  docker run -i -d -p 8080:8080 /bin/bash
+  307  docker run -i -d -p 8080:8080
+  308  docker run -i -p 8080:8080 first /bin/bash
+  309  cd devops/
+  310  docker exec -it first bash
+  311  docker ps -a
+  312  docker stop $(docker ps -a -q)
+  313  docker rm $(docker ps -a -q)
+  314  docker ps -a
+  315  docker build -t first .
+  316  ll
+  317  cd d
+  318  cd devopschool/
+  319  docker build -t first .
+  320  docker exec -it first bash
+  321  docker ps -a
+  322  docker ps 
+  323  docker ps -a
+  324  docker build --nocache -t first .
+  325  docker build --no-cache -t first .
+  326  docker ps -a
+  327  docker ps 
+  328  docker ps -a
+  329  docker images
+  330  docker exec -it first bash
+  331  docker exec first bash
+  332  docker run -it first bash
+  333  git pull
+  334  docker build -t first11 .
+  335  docker run -i -p 8080:8080 first11
+  336  docker run -it first bash
+  337  git pull
+  338  docker build -t first12 .
+  339  docker run -i -p 8080:8080 first12
+  340  docker run -it first bash
+  341  docker build -t first13 .
+  342  docker run -i -p 8080:8080 first13
+  343  docker run -it first13 bash
+  344  cat dockerfile
+  345  ll
+  346  cat Dockerfile 
+  347  git pull
+  348  cat Dockerfile 
+  349  docker build -t first14 .
+  350  docker build -t first15 .
+  351  git pull
+  352  cat Dockerfile 
+  353  docker build -t first16 .
+  354  docker run -i -p 8080:8080 first16
+  355  docker run -it first17 bash
+  356  git pull
+  357  docker build -t first17 .
+  358  git pull
+  359  docker build -t first18 .
+  360  git pull
+  361  docker build -t first19 .
+  362  git pull
+  363  docker build -t first19 .
+  364  docker run -i -p 8080:8080 first19
+  365  git pull
+  366  docker build -t first20 .
+  367  docker run -i -p 8080:8080 first20
+  368  history > commands.txt
