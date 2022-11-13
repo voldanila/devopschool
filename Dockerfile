@@ -11,7 +11,7 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /tmp/test/boxfuse-sample-java-war-hello
 RUN mvn package
 WORKDIR /tmp/test/boxfuse-sample-java-war-hello/target
-RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
-CMD ["/usr/share/bin/tomcat9/catalina.sh", "run"]
+#RUN cp hello-1.0.war /var/lib/apache-tomcat-9.0.68/webapps/
+CMD ["/usr/share/bin/apache-tomcat-9.0.68/catalina.sh", "run"]
 
 
