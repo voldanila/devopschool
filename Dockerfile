@@ -12,5 +12,6 @@ WORKDIR /tmp/test/boxfuse-sample-java-war-hello
 RUN mvn package
 WORKDIR /tmp/test/boxfuse-sample-java-war-hello/target
 RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
-CMD ["/bin/bash"]
+CMD ["catalina.sh", "run"]
+
 
