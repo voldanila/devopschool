@@ -1,3 +1,4 @@
-setup:
-    build:
-      context: setup/
+version: '3.7'
+
+services:
+  build: work7/sborka/
