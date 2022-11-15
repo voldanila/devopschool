@@ -1,0 +1,3 @@
+setup:
+    build:
+      context: setup/
