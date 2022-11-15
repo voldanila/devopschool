@@ -1,4 +1,5 @@
 version: '3.7'
 
 services:
-  build: work7/sborka/
+  sborka:
+    build: work7/sborka/
