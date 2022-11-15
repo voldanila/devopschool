@@ -3,3 +3,5 @@ version: '3.7'
 services:
   sborka:
     build: work7/sborka/
+    container_name: sborka7
+    command: docker run -it sborka7 bash
