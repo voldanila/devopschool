@@ -14,7 +14,6 @@ services:
       - ./home/danila/work7:/usr/local/tomcat/webapps
     ports:
       - "8080:8080"
-    command: python ./client.py
     depends_on:
       - sborka
       
