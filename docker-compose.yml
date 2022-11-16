@@ -3,18 +3,24 @@ version: '3.7'
 services:
   sborka:
     build: work7/sborka/
-    container_name: sborka7
+    container_name: sborka
     volumes:
       - ./tmp/work7_1:/tmp/test/boxfuse-sample-java-war-hello/target
   
   prod:
     build: work7/prod/
     container_name: prod
-    volumes: - ./tmp/work7_1:/tmp/test/boxfuse-sample-java-war-hello/target
+    volumes: 
+      - ./tmp/work7_1:/usr/local/tomcat/webapps
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sborka
       
 
 volumes:
   sborka:
+  prod:
 
 
 
