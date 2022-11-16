@@ -1,4 +1,4 @@
-FROM java:8-alpine
+FROM zenika/alpine-maven
 RUN apk add maven git
 RUN mkdir /tmp/test
 WORKDIR /tmp/test
