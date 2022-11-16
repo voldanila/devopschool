@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java
+FROM java:8-alpine
 RUN apk add maven git
 RUN mkdir /tmp/test
 WORKDIR /tmp/test
