@@ -1,5 +1,5 @@
 FROM alpine:3.16
-RUN apt update && apt install default-jdk maven git -y
+RUN apk update && apk add default-jdk maven git
 RUN mkdir /tmp/test
 WORKDIR /tmp/test
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
