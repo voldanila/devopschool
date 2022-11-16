@@ -1,5 +1,5 @@
 FROM zenika/alpine-maven
-RUN apk update && upgrade && add git
+RUN apk update && apk upgrade && apk add git
 RUN mkdir /tmp/test
 WORKDIR /tmp/test
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
