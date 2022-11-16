@@ -6,6 +6,12 @@ services:
     container_name: sborka7
     volumes:
       - ./tmp/work7_1:/tmp/test/boxfuse-sample-java-war-hello/target
+  
+  prod:
+    build: work7/prod/
+    container_name: prod
+    volumes: - ./tmp/work7_1:/tmp/test/boxfuse-sample-java-war-hello/target
+      
 
 volumes:
   sborka:
