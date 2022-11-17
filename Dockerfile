@@ -1,7 +1,7 @@
 FROM tomcat
 EXPOSE 8080
-WORKDIR /usr/local/tomcat/bin
-CMD ["catalina.sh", "run"]
+# WORKDIR /usr/local/tomcat/bin
+# CMD ["catalina.sh", "run"]
 
 
 # FROM zenika/alpine-maven
