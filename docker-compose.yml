@@ -7,7 +7,7 @@ services:
     build: work7/sborka/
     container_name: sborka1
     volumes:
-      - app-data:/tmp/test/boxfuse-sample-java-war-hello/target
+      - app-data:/tmp/webapp/
     networks:
       - bridge
 
