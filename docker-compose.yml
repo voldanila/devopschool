@@ -4,7 +4,7 @@ services:
     build: work7/sborka/
     container_name: sborka1
     volumes:
-      - app-data24:/tmp/webapp/
+      - app-data25:/tmp/webapp/
 
   prod:
     build: work7/prod/
@@ -12,10 +12,10 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - app-data24:/usr/share/apache-tomcat-9.0.68/webapps/
+      - app-data25:/usr/share/apache-tomcat-9.0.68/webapps/
 
 volumes:
-  app-data24: {}
+  app-data25: {}
 
 
 
