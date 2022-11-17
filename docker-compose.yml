@@ -19,8 +19,7 @@ services:
       
 
 volumes:
-  sborka:
-  prod:
+  war:
 
 
 
