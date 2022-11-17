@@ -3,21 +3,21 @@ networks:
   bridge:
     driver: bridge
 services:
-  build_mvn:
+  sborka:
     build: work7/sborka/
-    container_name: sborka
+    container_name: sborka1
     volumes:
-      - app-data:/tmp/webapp/
+      - app-data:/tmp/test/boxfuse-sample-java-war-hello/target
     networks:
       - bridge
 
-  web:
+  prod:
     build: work7/prod/
-    container_name: prod
+    container_name: prod1
     ports:
       - "8080:8080"
     volumes:
-      - app-data:/usr/share/apache-tomcat-9.0.68/webapps/
+      - app-data:/usr/local/tomcat/webapps
     networks:
       - bridge
 
