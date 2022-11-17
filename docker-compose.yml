@@ -15,7 +15,6 @@ services:
       - app-data11:/usr/share/apache-tomcat-9.0.68/webapps/
 
 
-
 volumes:
   app-data10: {}
   app-data11: {}
