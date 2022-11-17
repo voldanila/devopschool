@@ -4,18 +4,18 @@ networks:
     driver: bridge
 services:
   build_mvn:
-    build: ./maven
-    container_name: maven_t1
+    build: work7/sborka/
+    container_name: sborka
     volumes:
       - app-data:/tmp/webapp/
     networks:
       - bridge
 
   web:
-    build: ./tomcat
-    container_name: tomcat_t1
+    build: work7/prod/
+    container_name: prod
     ports:
-      - "8082:8080"
+      - "8080:8080"
     volumes:
       - app-data:/usr/share/apache-tomcat-9.0.68/webapps/
     networks:
