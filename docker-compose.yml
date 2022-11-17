@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - app-data:/usr/local/tomcat/webapps
+      - app-data:/usr/share/apache-tomcat-9.0.68/webapps/
     networks:
       - bridge
 
