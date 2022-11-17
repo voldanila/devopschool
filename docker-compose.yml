@@ -10,7 +10,7 @@ services:
       - app-data:/tmp/webapp/
     networks:
       - bridge
-  # The container that runs trackingkb + Tomcat
+
   web:
     build: ./tomcat
     container_name: tomcat_t1
@@ -20,7 +20,7 @@ services:
       - app-data:/usr/share/apache-tomcat-9.0.68/webapps/
     networks:
       - bridge
-  # The container that runs the database (postgres)
+
   
 volumes:
   app-data: {}
