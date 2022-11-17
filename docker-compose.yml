@@ -1,25 +1,24 @@
-version: '3.7'
-
+version: '3.2'
 services:
   sborka:
     build: work7/sborka/
-    container_name: sborka
+    container_name: sborka1
     volumes:
-      - war:/tmp/test/boxfuse-sample-java-war-hello/target
-  
+      - app-data10:/tmp/webapp/
+
   prod:
     build: work7/prod/
-    container_name: prod
-    volumes: 
-      - war:/usr/local/tomcat/webapps
+    container_name: prod1
     ports:
       - "8080:8080"
+    volumes:
+      - app-data11:/usr/share/apache-tomcat-9.0.68/webapps/
 
-      
+
 
 volumes:
-  war:
-
+  app-data10: {}
+  app-data11: {}
 
 
 
