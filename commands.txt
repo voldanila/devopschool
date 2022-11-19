@@ -369,4 +369,4 @@
   367  docker run -i -p 8080:8080 first20
   368  history > commands.txt
 
-  RUN cp hello-1.0.war /tmp/test/apache-tomcat-9.0.68/webapps/
+
