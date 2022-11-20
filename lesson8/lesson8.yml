@@ -34,3 +34,28 @@
   - name: Compile and package
     shell: mvn package -f /home/danila/lesson8
 
+
+- hosts: prod
+  tasks:    
+   - name: Copy Remote-To-Remote (from build to prod)
+     synchronize: src=/home/danila/lesson8/target dest=/home/danila
+     delegate_to: build
+     become: yes
+
+
+
+# - name: run java app
+#   hosts: prod
+#   become: yes
+
+#   tasks:
+#   - name: update linux packages
+#     apt:
+#       update_cache: yes
+#       cache_valid_time: 86400
+      
+#   - name: ensure default-jdk packages is present
+#     apt:
+#       name: default-jdk
+#       state: present
+
