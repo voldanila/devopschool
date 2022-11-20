@@ -38,6 +38,7 @@
     fetch:
       src: /home/danila/lesson8/target/hello-1.0.war
       dest: /home/danila/lesson8/devopschool/lesson8
+      flat: true
 
 
 
