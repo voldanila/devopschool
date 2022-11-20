@@ -6,7 +6,7 @@
   tasks:
   - name: ensure update linux packages is present
     apt:
-      name: update
+      name: update_cache=yes force_apt_get=yes cache_valid_time=3600
       state: present
   
   - name: ensure default-jdk packages is present
