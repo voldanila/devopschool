@@ -68,8 +68,8 @@
       remote_src: yes
       extra_opts: [--strip-components=1]
 
-  - name: start tomcat
-    script: /opt/tomcat9/bin/startup.sh start
+  - name: Start Tomcat
+    command: /opt/tomcat9/bin/startup.sh
 
   - name: copy war file to prod
     copy:
