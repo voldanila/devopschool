@@ -31,10 +31,10 @@
       clone: yes
       update: yes
 
-  - name: change dir
-    shell: cd /home/danila/lesson8_1/boxfuse-sample-java-war-hello
-    args:
+  # - name: change dir
+  #   shell: cd /home/danila/lesson8_1/boxfuse-sample-java-war-hello
+  #   args:
 
-  - name: Compile and package
-    shell: mvn package
+  # - name: Compile and package
+  #   shell: mvn package
 
