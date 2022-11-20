@@ -51,20 +51,13 @@
         src: /home/danila/lesson8/devopschool/lesson8/hello.war
         dest: /tmp
     
-
-    
-
-
-
-
-#   tasks:
-#   - name: update linux packages
-#     apt:
-#       update_cache: yes
-#       cache_valid_time: 86400
+    - name: update linux packages
+      apt:
+        update_cache: yes
+        cache_valid_time: 86400
       
-#   - name: ensure default-jdk packages is present
-#     apt:
-#       name: default-jdk
-#       state: present
+    - name: ensure tomcat packages is present
+      apt:
+        name: tomcat
+        state: present
 
