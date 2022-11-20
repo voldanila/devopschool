@@ -4,7 +4,7 @@
   become: yes
 
   tasks:
-  - name: ensure update linux packages is present
+  - name: update linux packages
     apt:
       update_cache: yes
       cache_valid_time: 86400
@@ -19,13 +19,13 @@
       name: maven
       state: present
 
-  - name: ensure maven service is started
-    service:
-      name: maven
-      state: started
-
   - name: ensure git packages is present
     apt:
       name: git
       state: present
+
+  - name: Git Clone app
+    git:
+      repo: "{{https://github.com/boxfuse/boxfuse-sample-java-war-hello.git}}"
+      dest: "{{/home/danila}}"
 
