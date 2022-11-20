@@ -45,26 +45,32 @@
   hosts: prod
   become: yes
 
-  tasks:
-    - name: copy war file to prod
-      copy:
-        src: /home/danila/lesson8/devopschool/lesson8/hello.war
-        dest: /tmp
-    
-    - name: update linux packages
-      apt:
-        update_cache: yes
-        cache_valid_time: 86400
+  tasks: 
+  - name: update linux packages
+    apt:
+      update_cache: yes
+      cache_valid_time: 86400
 
-    - name: ensure default-jdk packages is present
-      apt:
-        name: default-jdk
-        state: present
+  - name: ensure default-jdk packages is present
+    apt:
+      name: default-jdk
+      state: present
+
+  - name: Create a Tomcat Directory
+    file:
+      path: /opt/tomcat9
+
+  - name: download and unarchive tomcat
+    unarchive: 
+      src: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+      dest: /opt/tomcat9
+      remote_src: yes
+      extra_opts: [--strip-components=1]
+
+  - name: copy war file to prod
+    copy:
+      src: /home/danila/lesson8/devopschool/lesson8/hello.war
+      dest: /opt/tomcat9/webapps
       
-    - name: download and unarchive tomcat
-      unarchive: 
-        src: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
-        dest: /tmp/1
-        remote_src: yes
-        extra_opts: [--strip-components=1]
+
 
