@@ -49,7 +49,7 @@
     - name: copy war file to prod
       copy:
         src: /home/danila/lesson8/devopschool/lesson8/hello.war
-        dst: /tmp/hello.war
+        dest: /tmp
     
 
     
