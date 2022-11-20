@@ -27,13 +27,12 @@
   - name: Clone a github repository
     git:
       repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-      dest: /home/danila/lesson8_1
+      dest: /home/danila/lesson8
       clone: yes
       update: yes
 
   - name: change dir
-    shell: cd /home/danila/lesson8_1/
-    args:
+    shell: cd /home/danila/lesson8
 
   - name: Compile and package
     shell: mvn package
