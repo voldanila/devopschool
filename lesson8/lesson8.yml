@@ -68,11 +68,8 @@
       remote_src: yes
       extra_opts: [--strip-components=1]
 
-  - name: Creating service for Apache tomcat.
-    file:
-      path: /etc/systemd/system/tomcat.service
-      state: touch
-      mode: u+rwx,g-rwx,o-x
+  - name: start tomcat
+    script: /opt/tomcat9/bin/startup.sh start
 
   - name: copy war file to prod
     copy:
