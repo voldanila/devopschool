@@ -55,9 +55,16 @@
       apt:
         update_cache: yes
         cache_valid_time: 86400
-      
-    - name: ensure tomcat packages is present
+
+    - name: ensure default-jdk packages is present
       apt:
-        name: tomcat
+        name: default-jdk
         state: present
+      
+    - name: download and unarchive tomcat
+      unarchive: 
+        src: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+        dest: /opt/tomcat
+        remote_src: yes
+        extra_opts: [--strip-components=1]
 
