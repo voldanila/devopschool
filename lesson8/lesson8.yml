@@ -32,7 +32,7 @@
       update: yes
 
   - name: Compile and package
-    command: './mvnw clean package'
+    command: './mvnw clean install'
     args:
       chdir: /home/danila/lesson8_1
 
