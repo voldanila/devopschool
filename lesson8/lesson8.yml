@@ -35,14 +35,11 @@
     shell: mvn package -f /home/danila/lesson8
 
 
-
-  - hosts: build
-    tasks:
-    - name: transfer data from build to prod
-      copy:
-        src=/home/danila/lesson8/target
-        dest=/home/danila/
-      delegate_to: prod
+  - name: transfer data from build to prod
+    copy:
+      src=/home/danila/lesson8/target
+      dest=/home/danila/
+    delegate_to: prod
 
 
 # - hosts: prod
