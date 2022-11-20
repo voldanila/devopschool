@@ -34,10 +34,10 @@
   - name: Compile and package
     shell: mvn package -f /home/danila/lesson8
 
-  - name: fetch log
+  - name: fetch war file
     ansible.builtin.fetch:
-      src: "/home/danila/lesson8/target/hello-1.0.war"
-      dest: "/home/danila/lesson8/devopschool/lesson8"
+      src: /home/danila/lesson8/target/hello-1.0.war
+      dest: /home/danila/lesson8/devopschool/lesson8
 
 
 
