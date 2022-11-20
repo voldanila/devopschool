@@ -59,6 +59,7 @@
   - name: Create a Tomcat Directory
     file:
       path: /opt/tomcat9
+      state: directory
 
   - name: download and unarchive tomcat
     unarchive: 
