@@ -1,20 +1,20 @@
 ---
 - name: Create a Tomcat Directory
-    file:
-      path: /opt/tomcat9
-      state: directory
+  file:
+    path: /opt/tomcat9
+    state: directory
 
 - name: download and unarchive tomcat
-    unarchive: 
-      src: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
-      dest: /opt/tomcat9
-      remote_src: yes
-      extra_opts: [--strip-components=1]
+  unarchive: 
+    src: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+    dest: /opt/tomcat9
+    remote_src: yes
+    extra_opts: [--strip-components=1]
 
 - name: Start Tomcat
-    command: nohup /opt/tomcat9/bin/startup.sh
+  command: nohup /opt/tomcat9/bin/startup.sh
 
 - name: copy war file to prod
-    copy:
-      src: /home/danila/lesson9/hello.war
-      dest: /opt/tomcat9/webapps
+  copy:
+    src: /home/danila/lesson9/hello.war
+    dest: /opt/tomcat9/webapps
