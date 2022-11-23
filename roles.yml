@@ -1,17 +1,16 @@
 ---
-- name: web server configuration
+- name: sborka
   hosts: build
   become: yes
 
   roles:
     - common
-    - webserver
-    - security
+    - sborka
 
-- name: prod configuration
+- name: prod
   hosts: prod
   become: yes
 
   roles:
     - common
-    - security
+    - prod
