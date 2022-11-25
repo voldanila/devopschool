@@ -1,0 +1,13 @@
+cd /home/danila
+apt update && apt install git docker.io -y
+mkdir -p lesson10
+cd lesson10
+rm -rf *
+git clone --branch=lesson10 https://github.com/voldanila/devopschool.git
+cd devopschool
+docker build -t app:0.2 .
+service docker restart
+cp daemon.json /etc/docker/
+cat password.txt | docker login 84.201.137.155:8123 --username admin --password-stdin
+docker tag app:0.2 84.201.137.155:8123/app:0.2
+docker push 84.201.137.155:8123/app:0.2
