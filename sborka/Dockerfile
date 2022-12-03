@@ -4,7 +4,7 @@ RUN git clone https://github.com/voldanila/java_mysql.git
 WORKDIR java_mysql
 RUN wget https://github.com/voldanila/devopschool/blob/lesson12/Config.properties
 RUN mkdir config
-RUN vm Config.properties /config
+RUN cp Config.properties /config
 RUN mvn package
 RUN cp /target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /target/java-mysql.war
 
