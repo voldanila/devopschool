@@ -7,4 +7,4 @@ RUN mkdir config
 RUN cp /java_mysql/Config.properties /java_mysql/config
 RUN mvn package
 RUN cp /java_mysql/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /java_mysql/target/java-mysql.war
-SHELL ["/bin/bash", "-c"]
+
