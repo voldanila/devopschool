@@ -1,0 +1,24 @@
+version: '3.2'
+services:
+  builder:
+    build: ./sborka
+    volumes:
+     - war:/java_mysql/target
+
+  web:
+    image: tomcat:7-jre8-alpine
+    volumes:
+     - war:/usr/local/tomcat/webapps
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.1
+    environment:
+      - MYSQL_ROOT_PASSWORD=java_mysql_pass
+      - MYSQL_DATABASE=java_mysql_db
+
+volumes:
+  war:
