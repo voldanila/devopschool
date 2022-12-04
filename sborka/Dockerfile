@@ -4,5 +4,3 @@ RUN git clone https://github.com/voldanila/java_mysql.git
 WORKDIR java_mysql
 RUN mvn package
 
-
-
