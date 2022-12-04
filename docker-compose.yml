@@ -4,13 +4,13 @@ services:
     build: ./sborka
     volumes:
      - war:/java_mysql/target
-     - war2:/java_mysql/config
+
 
   web:
     image: tomcat:7-jre8-alpine
     volumes:
      - war:/usr/local/tomcat/webapps
-     - war2:/usr/local/tomcat
+
     ports:
       - "8080:8080"
     depends_on:
@@ -24,4 +24,3 @@ services:
 
 volumes:
   war:
-  war2:
