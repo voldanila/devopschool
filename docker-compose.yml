@@ -17,9 +17,17 @@ services:
 
   db:
     image: mariadb:10.1
+    ports:
+      - "3302:3302"
     environment:
-      - MYSQL_ROOT_PASSWORD=java_mysql_pass
-      - MYSQL_DATABASE=java_mysql_db
+      MYSQL_USER: java_mysql
+      MYSQL_PASSWORD: java_mysql_pass
+      MYSQL_DATABASE: java_mysql_db
+      MYSQL_ROOT_PASSWORD: java_mysql_pass
+    volumes:
+      - mysql_data:/var/lib/mysql
+    
 
 volumes:
   war:
+  mysql_data:
